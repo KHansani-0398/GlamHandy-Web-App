@@ -1144,6 +1144,8 @@ if (isset($_POST['logout'])) {
                                           $status_class = 'bg-success';
                                       } elseif (strtolower($status) === 'rejected' || strtolower($status) === 'cancelled') {
                                           $status_class = 'bg-danger';
+
+                                          
                                       }
                                       ?>
                                       <tr>
