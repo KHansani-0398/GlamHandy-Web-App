@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script>window.location.href="User.php";</script>
+      <meta http-equiv="refresh" content="0;url=User.php">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="GlamHandy Team">
+      <meta name="description" content="My Account - GlamHandy Arts & Crafts Store">
+      <title>My Profile - GlamHandy Arts & Crafts</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css"/>
+      <style>
+         .profile-nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            padding: 12px 18px;
+            border: none;
+            background: transparent;
+            color: #555;
+            font-weight: 500;
+            border-radius: 10px;
+            text-align: left;
+            transition: all 0.25s ease;
+         }
+         .profile-nav-btn:hover {
+            background: #fff0f3;
+            color: var(--primary);
+         }
+         .profile-nav-btn.active {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(232, 40, 26, 0.25);
+         }
+         .profile-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0e6e8;
+         }
+         .avatar-wrapper {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto;
+         }
+         .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+         }
+         .avatar-edit-btn {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            width: 38px;
+            height: 38px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 2px solid #fff;
+            transition: transform 0.2s ease;
+         }
+         .avatar-edit-btn:hover {
+            transform: scale(1.1);
+         }
+         .tab-panel {
+            display: none;
+         }
+         .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.35s ease;
+         }
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+         }
+         .order-status-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+         }
+         .status-delivered { background: #e6f4ea; color: #137333; }
+         .status-transit { background: #e8f0fe; color: #1a73e8; }
+         .status-processing { background: #fef7e0; color: #b06000; }
+      </style>
+   </head>
+   <body>
+      <!-- TOP BAR -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>076 344 5742</span>
+                  <span><i class="fas fa-envelope"></i>info.glamhandy@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>65/39, 7th Lane, Jothiala Rd, Malabe</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-truck me-1"></i>Get your order delivered in just 2 days!</span>
+                  <div class="tsoc">
+                     <a href="https://web.facebook.com/info.glamhandycraftstore/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/info.glamhandyofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <div class="blogo">
+                  <div class="bico"><img src="img/logo.png.jpeg" alt="Logo"></div>
+                  <div>
+                     <div class="bname">Glam<span>Handy</span></div>
+                     <div class="bsub">Craft Store</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+               <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav ms-auto me-3">
+                  <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="catalog.php">Catalog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Contact</a></li>
+               </ul>
+               <div class="d-flex align-items-center gap-2">
+                  <!-- Search button -->
+                  <button id="navSearchBtn" title="Search"><i class="fas fa-search"></i></button>
+                   <a href="login.php" class="nav-login me-1" style="color:var(--dark);font-weight:600;font-size:0.9rem;text-decoration:none;">Login</a>
+                   <a href="register.html" class="nav-login me-2" style="color:var(--primary);font-weight:600;font-size:0.9rem;text-decoration:none;">Register</a>
+                   <a href="catalog.php" class="nav-link nav-cta ms-1"><i class="fas fa-shopping-bag me-1"></i>Order Now</a>
+               </div>
+            </div>
+         </div>
+      </nav>
+
+      <!-- PAGE HEADER BANNER -->
+      <section style="background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%); padding: 50px 0; border-bottom: 1px solid #f0d8dc;">
+         <div class="container text-center">
+            <h1 class="stitle" style="font-family: 'Playfair Display', serif; font-size: 2.3rem; font-weight: 900; color: var(--dark); margin-top: 5px;">My <span>Account Profile</span></h1>
+            <p class="text-muted mt-2" style="font-family: 'Poppins', sans-serif; max-width: 600px; margin: 0 auto; font-size: 0.95rem;">
+               Manage your personal information, profile photo, saved shipping addresses, and craft order history.
+            </p>
+         </div>
+      </section>
+
+      <!-- PROFILE DASHBOARD SECTION -->
+      <section style="padding: 60px 0; background: #fdf8f8;">
+         <div class="container">
+            <div class="row g-4">
+
+               <!-- SIDEBAR -->
+               <div class="col-lg-4 col-xl-3">
+                  <div class="profile-card p-4 text-center mb-4">
+                     <div class="avatar-wrapper mb-3">
+                        <img id="profileAvatarImg" src="img/testimonial/1.jpg" alt="User Profile Picture" class="avatar-img"/>
+                        <label for="avatarUploadInput" class="avatar-edit-btn" title="Change Profile Picture">
+                           <i class="fas fa-camera"></i>
+                        </label>
+                        <input type="file" id="avatarUploadInput" accept="image/*" style="display:none;" onchange="handleAvatarChange(event)"/>
+                     </div>
+                     <h5 class="fw-bold mb-1" id="displayUserName">Sarah Jenkins</h5>
+                     <p class="text-muted small mb-3"><i class="fas fa-envelope me-1"></i>sarah.crafts@gmail.com</p>
+                     <span class="badge bg-danger rounded-pill px-3 py-2" style="font-size:0.75rem; letter-spacing: 0.5px;">PRO CRAFTER MEMBER</span>
+                  </div>
+
+                  <div class="profile-card p-3">
+                     <nav class="d-flex flex-column gap-1">
+                        <button class="profile-nav-btn active" onclick="switchTab('tab-personal', this)">
+                           <i class="fas fa-user"></i> Personal Info & Contact
+                        </button>
+                        <button class="profile-nav-btn" onclick="switchTab('tab-avatar', this)">
+                           <i class="fas fa-image"></i> Change Profile Picture
+                        </button>
+                        <button class="profile-nav-btn" onclick="switchTab('tab-orders', this)">
+                           <i class="fas fa-box"></i> Order History & Tracking
+                        </button>
+                        <button class="profile-nav-btn" onclick="switchTab('tab-address', this)">
+                           <i class="fas fa-map-marker-alt"></i> Saved Delivery Addresses
+                        </button>
+                        <button class="profile-nav-btn" onclick="switchTab('tab-security', this)">
+                           <i class="fas fa-lock"></i> Security & Password
+                        </button>
+                        <button class="profile-nav-btn text-danger mt-2" onclick="handleLogout()">
+                           <i class="fas fa-sign-out-alt"></i> Log Out Account
+                        </button>
+                     </nav>
+                  </div>
+               </div>
+
+               <!-- MAIN CONTENT PANELS -->
+               <div class="col-lg-8 col-xl-9">
+
+                  <!-- NOTIFICATION TOAST -->
+                  <div id="statusAlert" class="alert alert-success alert-dismissible fade show d-none mb-4" role="alert">
+                     <i class="fas fa-check-circle me-2"></i><span id="statusAlertMsg">Profile updated successfully!</span>
+                     <button type="button" class="btn-close" onclick="hideStatusAlert()"></button>
+                  </div>
+
+                  <!-- TAB 1: PERSONAL INFO & CONTACT -->
+                  <div id="tab-personal" class="tab-panel active">
+                     <div class="profile-card p-4 p-md-5">
+                        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                           <h4 class="fw-bold mb-0" style="font-family:'Playfair Display', serif;"><i class="fas fa-id-card me-2 text-danger"></i>Personal Details &amp; Contact Information</h4>
+                        </div>
+                        <form onsubmit="savePersonalInfo(event)">
+                           <div class="row g-3">
+                              <div class="col-md-6">
+                                 <label class="form-label fw-semibold text-secondary">First Name *</label>
+                                 <input type="text" id="inputFirstName" class="form-control p-3" value="Sarah" required/>
+                              </div>
+                              <div class="col-md-6">
+                                 <label class="form-label fw-semibold text-secondary">Last Name *</label>
+                                 <input type="text" id="inputLastName" class="form-control p-3" value="Jenkins" required/>
+                              </div>
+                              <div class="col-md-6">
+                                 <label class="form-label fw-semibold text-secondary">Email Address *</label>
+                                 <input type="email" id="inputEmail" class="form-control p-3" value="sarah.crafts@gmail.com" required/>
+                              </div>
+                              <div class="col-md-6">
+                                 <label class="form-label fw-semibold text-secondary">Phone Number *</label>
+                                 <input type="tel" id="inputPhone" class="form-control p-3" value="077 123 4567" required/>
+                              </div>
+                              <div class="col-12">
+                                 <label class="form-label fw-semibold text-secondary">Craft Interests / Bio</label>
+                                 <textarea id="inputBio" class="form-control p-3" rows="3" placeholder="Tell us what craft projects you enjoy (e.g. Crochet, Resin Art, Beadwork)...">Passionate crochet artist and handmade jewelry enthusiast. Love creating custom bags and cozy yarn crafts.</textarea>
+                              </div>
+                              <div class="col-12 mt-4 text-end">
+                                 <button type="submit" class="btn btn-danger px-4 py-2 rounded-pill fw-semibold"><i class="fas fa-save me-2"></i>Save Changes</button>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+
+                  <!-- TAB 2: CHANGE PROFILE PICTURE -->
+                  <div id="tab-avatar" class="tab-panel">
+                     <div class="profile-card p-4 p-md-5">
+                        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                           <h4 class="fw-bold mb-0" style="font-family:'Playfair Display', serif;"><i class="fas fa-camera me-2 text-danger"></i>Change Profile Picture</h4>
+                        </div>
+                        <div class="row align-items-center g-4">
+                           <div class="col-md-4 text-center">
+                              <div class="avatar-wrapper mb-3" style="width:150px; height:150px;">
+                                 <img id="avatarPreviewTab" src="img/testimonial/1.jpg" alt="Preview" class="avatar-img"/>
+                              </div>
+                              <p class="text-muted small">Current Avatar Preview</p>
+                           </div>
+                           <div class="col-md-8">
+                              <h6 class="fw-bold">Upload Custom Profile Photo</h6>
+                              <p class="text-muted small">Select an image file from your device (JPG, PNG, or WEBP). Maximum size: 5MB.</p>
+                              <div class="mb-3">
+                                 <input type="file" id="tabAvatarInput" accept="image/*" class="form-control p-2" onchange="previewTabAvatar(event)"/>
+                              </div>
+                              <div class="d-flex gap-2">
+                                 <button class="btn btn-danger rounded-pill px-4 py-2" onclick="confirmAvatarChange()"><i class="fas fa-upload me-2"></i>Apply Profile Photo</button>
+                                 <button class="btn btn-outline-secondary rounded-pill px-3 py-2" onclick="resetAvatarToDefault()"><i class="fas fa-undo me-1"></i>Reset to Default</button>
+                              </div>
+                              <hr class="my-4"/>
+                              <h6 class="fw-bold mb-3">Or Pick a Preset Crafter Avatar</h6>
+                              <div class="d-flex gap-3 flex-wrap">
+                                 <img src="img/testimonial/1.jpg" style="width:55px;height:55px;border-radius:50%;cursor:pointer;border:2px solid transparent;" class="preset-avatar" onclick="selectPresetAvatar('img/testimonial/1.jpg', this)"/>
+                                 <img src="img/testimonial/2.jpg" style="width:55px;height:55px;border-radius:50%;cursor:pointer;border:2px solid transparent;" class="preset-avatar" onclick="selectPresetAvatar('img/testimonial/2.jpg', this)"/>
+                                 <img src="img/testimonial/3.jpg" style="width:55px;height:55px;border-radius:50%;cursor:pointer;border:2px solid transparent;" class="preset-avatar" onclick="selectPresetAvatar('img/testimonial/3.jpg', this)"/>
+                                 <img src="img/testimonial/4.jpg" style="width:55px;height:55px;border-radius:50%;cursor:pointer;border:2px solid transparent;" class="preset-avatar" onclick="selectPresetAvatar('img/testimonial/4.jpg', this)"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- TAB 3: ORDER HISTORY -->
+                  <div id="tab-orders" class="tab-panel">
+                     <div class="profile-card p-4 p-md-5">
+                        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                           <h4 class="fw-bold mb-0" style="font-family:'Playfair Display', serif;"><i class="fas fa-box-open me-2 text-danger"></i>My Craft Order History</h4>
+                           <span class="badge bg-secondary px-3 py-2 rounded-pill">3 Recent Orders</span>
+                        </div>
+                        <div class="table-responsive">
+                           <table class="table table-hover align-middle">
+                              <thead class="table-light">
+                                 <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items Ordered</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="fw-bold text-danger">#GH-9842</td>
+                                    <td>20 Jul 2026</td>
+                                    <td>
+                                       <small class="d-block fw-semibold text-dark">Milk Cotton Yarn (25g) x3</small>
+                                       <small class="text-muted">Tulip Etimo Crochet Hook Set</small>
+                                    </td>
+                                    <td class="fw-bold">Rs. 1,305.00</td>
+                                    <td><span class="order-status-badge status-delivered"><i class="fas fa-check-circle me-1"></i>Delivered</span></td>
+                                    <td><a href="catalog.php" class="btn btn-sm btn-outline-danger rounded-pill">Reorder</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fw-bold text-danger">#GH-9730</td>
+                                    <td>12 Jun 2026</td>
+                                    <td>
+                                       <small class="d-block fw-semibold text-dark">Acrylic Beads Asst. Pack x2</small>
+                                       <small class="text-muted">Wooden Crochet Bag Base</small>
+                                    </td>
+                                    <td class="fw-bold">Rs. 1,200.99</td>
+                                    <td><span class="order-status-badge status-delivered"><i class="fas fa-check-circle me-1"></i>Delivered</span></td>
+                                    <td><a href="catalog.php" class="btn btn-sm btn-outline-danger rounded-pill">Reorder</a></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fw-bold text-danger">#GH-9611</td>
+                                    <td>28 May 2026</td>
+                                    <td>
+                                       <small class="d-block fw-semibold text-dark">Decorative Feathers Multi-pack</small>
+                                    </td>
+                                    <td class="fw-bold">Rs. 1,200.99</td>
+                                    <td><span class="order-status-badge status-delivered"><i class="fas fa-check-circle me-1"></i>Delivered</span></td>
+                                    <td><a href="catalog.php" class="btn btn-sm btn-outline-danger rounded-pill">Reorder</a></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- TAB 4: SAVED ADDRESSES -->
+                  <div id="tab-address" class="tab-panel">
+                     <div class="profile-card p-4 p-md-5">
+                        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                           <h4 class="fw-bold mb-0" style="font-family:'Playfair Display', serif;"><i class="fas fa-map-marked-alt me-2 text-danger"></i>Saved Delivery Addresses</h4>
+                           <button class="btn btn-danger btn-sm rounded-pill px-3 py-2" onclick="openAddAddressModal()"><i class="fas fa-plus me-1"></i>Add New Address</button>
+                        </div>
+                        <div class="row g-3">
+                           <div class="col-md-6">
+                              <div class="card p-3 border rounded-3 position-relative" style="background:#fffafb; border-color:#f0c0c6 !important;">
+                                 <span class="badge bg-danger position-absolute top-0 end-0 m-3">Default Shipping</span>
+                                 <h6 class="fw-bold mb-2"><i class="fas fa-home me-2 text-danger"></i>Home Address</h6>
+                                 <p class="mb-1 text-dark fw-semibold">Sarah Jenkins</p>
+                                 <p class="mb-1 text-secondary small">No. 45, Kandy Road, Malabe, Colombo</p>
+                                 <p class="mb-2 text-secondary small">Phone: 077 123 4567</p>
+                                 <div class="d-flex gap-2 mt-2">
+                                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3">Edit</button>
+                                    <button class="btn btn-sm btn-link text-muted text-decoration-none">Delete</button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="card p-3 border rounded-3 bg-white">
+                                 <h6 class="fw-bold mb-2"><i class="fas fa-briefcase me-2 text-primary"></i>Workplace / Craft Studio</h6>
+                                 <p class="mb-1 text-dark fw-semibold">Sarah Jenkins (Studio)</p>
+                                 <p class="mb-1 text-secondary small">Level 3, Creative Hub, Main St, Colombo 03</p>
+                                 <p class="mb-2 text-secondary small">Phone: 076 344 5742</p>
+                                 <div class="d-flex gap-2 mt-2">
+                                    <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Edit</button>
+                                    <button class="btn btn-sm btn-link text-muted text-decoration-none">Set Default</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- TAB 5: SECURITY & PASSWORD -->
+                  <div id="tab-security" class="tab-panel">
+                     <div class="profile-card p-4 p-md-5">
+                        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                           <h4 class="fw-bold mb-0" style="font-family:'Playfair Display', serif;"><i class="fas fa-shield-alt me-2 text-danger"></i>Security &amp; Password Management</h4>
+                        </div>
+                        <form onsubmit="changePassword(event)">
+                           <div class="row g-3" style="max-width: 600px;">
+                              <div class="col-12">
+                                 <label class="form-label fw-semibold text-secondary">Current Password *</label>
+                                 <input type="password" id="currPass" class="form-control p-3" placeholder="Enter current password" required/>
+                              </div>
+                              <div class="col-12">
+                                 <label class="form-label fw-semibold text-secondary">New Password *</label>
+                                 <input type="password" id="newPass" class="form-control p-3" placeholder="Enter new password (min. 6 characters)" required minlength="6"/>
+                              </div>
+                              <div class="col-12">
+                                 <label class="form-label fw-semibold text-secondary">Confirm New Password *</label>
+                                 <input type="password" id="confPass" class="form-control p-3" placeholder="Confirm new password" required/>
+                              </div>
+                              <div class="col-12 mt-4">
+                                 <button type="submit" class="btn btn-danger px-4 py-2 rounded-pill fw-semibold"><i class="fas fa-lock me-2"></i>Update Password</button>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Glam<span>Handy</span></div>
+                  <p class="fdesc">We bring together quality craft supplies at affordable prices, helping every creator turn ideas into beautiful handmade projects.</p>
+                  <div class="fsoc">
+                     <a href="https://web.facebook.com/info.glamhandycraftstore/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/info.glamhandyofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Quick Links</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#hero"><i class="fas fa-chevron-right"></i>Home</a></li>
+                     <li><a href="index.html#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Our Collection</a></li>
+                     <li><a href="index.html#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                     <li><a href="index.html#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Our Collection</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Crochet & Yarn</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Beads & Jewellery</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Bag Accessories</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Patterns & Books</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Craft Tools</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Craft Materials</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Get In Touch</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Address</strong>65/39, 7th Lane, Jothiala Rd, Malabe</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Phone</strong>076 344 5742</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>info.glamhandy@gmail.com</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-clock"></i></div>
+                     <div class="fciinfo"><strong>Hours</strong>Mon - Tue: 9 AM - 8 PM | Wed - Sun: 9 AM - 11 PM</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>GlamHandy Craft Store</span>. All Rights Reserved.</p>
+                  <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+      <!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+      <!-- Profile JS Script -->
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            const userStr = localStorage.getItem('currentUser');
+            if (userStr) {
+               const user = JSON.parse(userStr);
+               if (user.name) {
+                  document.getElementById('displayUserName').textContent = user.name;
+                  const parts = user.name.trim().split(' ');
+                  document.getElementById('inputFirstName').value = parts[0] || '';
+                  document.getElementById('inputLastName').value = parts.slice(1).join(' ') || parts[0] || '';
+               }
+               if (user.email) {
+                  document.getElementById('inputEmail').value = user.email;
+                  const emailDisplay = document.querySelector('.profile-card .text-muted.small');
+                  if (emailDisplay) {
+                     emailDisplay.innerHTML = '<i class="fas fa-envelope me-1"></i>' + user.email;
+                  }
+               }
+            }
+         });
+
+         function switchTab(tabId, btn) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.profile-nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+         }
+
+         function showStatusAlert(msg) {
+            const alert = document.getElementById('statusAlert');
+            document.getElementById('statusAlertMsg').textContent = msg;
+            alert.classList.remove('d-none');
+            window.scrollTo({ top: 120, behavior: 'smooth' });
+            setTimeout(() => hideStatusAlert(), 4000);
+         }
+
+         function hideStatusAlert() {
+            document.getElementById('statusAlert').classList.add('d-none');
+         }
+
+         function savePersonalInfo(e) {
+            e.preventDefault();
+            const fname = document.getElementById('inputFirstName').value.trim();
+            const lname = document.getElementById('inputLastName').value.trim();
+            const email = document.getElementById('inputEmail').value.trim();
+            const fullName = (fname + ' ' + lname).trim();
+
+            document.getElementById('displayUserName').textContent = fullName;
+            const emailDisplay = document.querySelector('.profile-card .text-muted.small');
+            if (emailDisplay) {
+               emailDisplay.innerHTML = '<i class="fas fa-envelope me-1"></i>' + email;
+            }
+
+            const userStr = localStorage.getItem('currentUser');
+            if (userStr) {
+               const user = JSON.parse(userStr);
+               user.name = fullName;
+               user.email = email;
+               localStorage.setItem('currentUser', JSON.stringify(user));
+            }
+
+            showStatusAlert('Personal contact information saved successfully!');
+         }
+
+         function handleAvatarChange(e) {
+            const file = e.target.files[0];
+            if (file) {
+               const reader = new FileReader();
+               reader.onload = function(evt) {
+                  document.getElementById('profileAvatarImg').src = evt.target.result;
+                  document.getElementById('avatarPreviewTab').src = evt.target.result;
+                  showStatusAlert('Profile photo updated successfully!');
+               };
+               reader.readAsDataURL(file);
+            }
+         }
+
+         function previewTabAvatar(e) {
+            handleAvatarChange(e);
+         }
+
+         function selectPresetAvatar(src, imgEl) {
+            document.querySelectorAll('.preset-avatar').forEach(i => i.style.borderColor = 'transparent');
+            imgEl.style.borderColor = 'var(--primary)';
+            document.getElementById('profileAvatarImg').src = src;
+            document.getElementById('avatarPreviewTab').src = src;
+            showStatusAlert('Preset profile avatar applied!');
+         }
+
+         function confirmAvatarChange() {
+            showStatusAlert('Profile picture confirmed and updated!');
+         }
+
+         function resetAvatarToDefault() {
+            document.getElementById('profileAvatarImg').src = 'img/testimonial/1.jpg';
+            document.getElementById('avatarPreviewTab').src = 'img/testimonial/1.jpg';
+            showStatusAlert('Profile picture reset to default.');
+         }
+
+         function changePassword(e) {
+            e.preventDefault();
+            const np = document.getElementById('newPass').value;
+            const cp = document.getElementById('confPass').value;
+            if (np !== cp) {
+               alert('New password and confirmation password do not match!');
+               return;
+            }
+            document.getElementById('currPass').value = '';
+            document.getElementById('newPass').value = '';
+            document.getElementById('confPass').value = '';
+            showStatusAlert('Account password updated securely!');
+         }
+
+         function openAddAddressModal() {
+            showStatusAlert('Address addition form ready! Enter your new shipping location.');
+         }
+
+         function handleLogout() {
+            if (confirm('Are you sure you want to log out of your GlamHandy account?')) {
+               logoutUser();
+            }
+         }
+      </script>
+   </body>
+</html>

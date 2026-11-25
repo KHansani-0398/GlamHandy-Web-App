@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="H.Kularatne">
+      <meta name="description" content="Online Arts & Crafts Store">
+      <title>GlamHandy Arts & Crafts</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="css/aos.css" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>076 344 5742</span>
+                  <span><i class="fas fa-envelope"></i>info.glamhandy@gmail.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>65/39, 7th Lane, Jothiala Rd, Malabe</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-truck me-1"></i>Get your order delivered in just 2 days!</span>
+                  <div class="tsoc">
+                     <a href="https://web.facebook.com/info.glamhandycraftstore/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/info.glamhandyofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="#">
+               <div class="blogo">
+                  <div class="bico"><img src="img/logo.png.jpeg" alt="Logo"></div>
+                  <div>
+                     <div class="bname">Glam<span>Handy</span></div>
+                     <div class="bsub">Craft Store</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link active" href="index.html#hero">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="catalog.php">Catalog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#chefs">Who we are</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Contact</a></li>
+               </ul>
+               <div class="d-flex align-items-center gap-2">
+                  <!-- Search button -->
+                  <button id="navSearchBtn" title="Search"><i class="fas fa-search"></i></button>
+                  <a href="login.php" class="nav-login me-1" style="color:var(--dark);font-weight:600;font-size:0.9rem;text-decoration:none;">Login</a>
+                  <a href="register.html" class="nav-login me-2" style="color:var(--primary);font-weight:600;font-size:0.9rem;text-decoration:none;">Register</a>
+                  <a href="catalog.php" class="nav-link nav-cta ms-1"><i class="fas fa-shopping-bag me-1"></i>Order Now</a>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- ============================================================
+         FIX 1 � SEARCH OVERLAY POPUP
+         ============================================================ -->
+      <div id="searchOv">
+         <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+         <div class="sovbox">
+            <h4>What do want to create today?</h4>
+            <div class="sovinput">
+               <input type="text" id="searchInput" placeholder="Search yarn, beads, hooks..." autocomplete="off"/>
+               <button><i class="fas fa-search"></i></button>
+            </div>
+            <!-- Categories inside search box -->
+            <div class="sovcats">
+               <div class="sovcat active" data-cat="all">
+                  <img src="img/menu/1.jpg" alt=""/>All Items
+               </div>               <div class="sovcat" data-cat="yarn">
+                  <img src="img/menu/1.jpg" alt=""/>Yarn & Crochet
+               </div>
+               <div class="sovcat" data-cat="jewelry">
+                  <img src="img/menu/2.jpg" alt=""/>Beads & Jewellery
+               </div>
+               <div class="sovcat" data-cat="bags">
+                  <img src="img/menu/3.jpg" alt=""/>Bag Accessories
+               </div>
+               <div class="sovcat" data-cat="tools">
+                  <img src="img/menu/4.jpg" alt=""/>Craft Tools
+               </div>
+               <div class="sovcat" data-cat="materials">
+                  <img src="img/menu/5.jpg" alt=""/>Craft Materials
+               </div>
+                
+            </div>
+            <div class="sovtrend">
+               <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Trending Searches</p>
+               <span class="ttag">Milk Cotton Yarn</span>
+               <span class="ttag">Acryllic Beads</span>
+               <span class="ttag">Crochet Hooks</span>
+               <span class="ttag">Bag Zippers</span>
+               <span class="ttag">Peal Handles</span>
+               <span class="ttag">Knitting Needles</span>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         HERO
+         ============================================================ -->
+      <section id="category" style="padding-top: 100px;">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">What We Offer</span>
+               <h2 class="stitle">Browse by <span>Category</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">Browse our extensive collection of craft supplies, DIY essentials, and handmade accessories at affordable prices</p>
+            </div>
+            <div class="row g-3 justify-content-center">
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="0">
+                  <div class="catcard active" data-filter="all">
+                     <img class="catimg" src="img/category/1.jpg" alt=""/>
+                     <div class="catnm">All Items</div>
+                     <div class="catct">450+ items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="70">
+                  <div class="catcard" data-filter="yarn">
+                     <img class="catimg" src="img/category/2.jpg" alt=""/>
+                     <div class="catnm">Yarn & Crochet</div>
+                     <div class="catct">130 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="140">
+                  <div class="catcard" data-filter="jewelry">
+                     <img class="catimg" src="img/category/3.jpg" alt=""/>
+                     <div class="catnm">Beads & Jewellery</div>
+                     <div class="catct">150 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="210">
+                  <div class="catcard" data-filter="bags">
+                     <img class="catimg" src="img/category/4.jpg" alt=""/>
+                     <div class="catnm">Bag Accessories</div>
+                     <div class="catct">100 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="280">
+                  <div class="catcard" data-filter="tools">
+                     <img class="catimg" src="img/category/5.jpg" alt=""/>
+                     <div class="catnm">Craft Tools</div>
+                     <div class="catct">100 items</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="catcard" data-filter="materials">
+                     <img class="catimg" src="img/category/6.jpg" alt=""/>
+                     <div class="catnm">Craft Materials</div>
+                     <div class="catct">50 items</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ABOUT -->
+      <section id="menu">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">What do you want to craft today?</span>
+               <h2 class="stitle">Our Amazing<span> Collection</span></h2>
+               <div class="sline"></div>
+            </div>
+             <!-- FIX 3 filter buttons & sort dropdown -->
+             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4" data-aos="fade-up">
+                <div class="d-flex flex-wrap gap-1">
+                   <button class="filtbtn active" data-f="all">All</button>
+                   <button class="filtbtn" data-f="yarn">Yarn &amp; Crochet</button>
+                   <button class="filtbtn" data-f="jewelry">Beads &amp; Jewellery</button>
+                   <button class="filtbtn" data-f="bags">Bag Accessories</button>
+                   <button class="filtbtn" data-f="tools">Craft Tools</button>
+                   <button class="filtbtn" data-f="materials">Craft Materials</button>
+                </div>v>
+                <div class="d-flex align-items-center gap-2">
+                   <label for="catalogSortSelect" class="fw-semibold text-secondary small mb-0" style="white-space:nowrap;"><i class="fas fa-sort-amount-down me-1 text-danger"></i>Sort By:</label>
+                   <select id="catalogSortSelect" class="form-select form-select-sm shadow-sm" style="min-width: 200px; border-radius: 20px; border-color: #f0c0c6;">
+                      <option value="default">Featured / Default</option>
+                      <option value="price-asc">Price: Low to High</option>
+                      <option value="price-desc">Price: High to Low</option>
+                      <option value="newest">Newest First</option>
+                   </select>
+                </div>
+             </div>
+            <div class="row g-4" id="mgrid">
+               <!-- CARD 1: Yarn -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="yarn" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="img/menu/1.jpg"
+                     data-title="Milk Cotton Yarn(25g)"
+                     data-cat="Yarn & Crochet"
+                     data-price="Rs.185.00" data-old="Rs.200.00"
+                     data-desc="Premium milk cotton yarn, soft texture, vibrant colours, and perfect for crochet, knitting, amigurumi, and handmade craft projects."
+                     data-tags="Soft Touch,Premium Quality,Vibrant Colors">
+                     <div class="mimg">
+                        <img src="img/menu/1.jpg" alt="Milk Cotton Yarn(25g)"/>
+                        <div class="mbdg hot"><i class="fas fa-star"></i> Hot</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Yarn & Crochet</div>
+                        <div class="mtit">Milk Cotton Yarn(25g)</div>
+                        <div class="mdesc">Premium milk cotton yarn, soft texture, vibrant colours, and perfect for crochet, and knitting</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">Rs.185.00 <small>Rs.200.00</small></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 2: Jewellery -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="jewelry" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/2.jpg"
+                     data-title="Acryllic Beads"
+                     data-cat="Beads & Jewellery"
+                     data-price="Rs.200.00" data-old="Rs.250.99"
+                     data-desc="Mixed color acrylic beads in assorted shapes and sizes, perfect for handmade jewellery, bracelets, keychains, and creative DIY crafts."
+                     data-tags="Assorted Colors,DIY Jewelry,Durable">
+                     <div class="mimg">
+                        <img src="img/menu/2.jpg" alt="Acryllic Beads"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Beads & Jewellery</div>
+                        <div class="mtit">Acryllic Beads</div>
+                        <div class="mdesc">Mixed color beads, assorted shapes and sizes, perfect for handmade jewellery, and creative DIY crafts</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">Rs.200.00 <small>Rs.250.99</small></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 3: Bags -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="bags" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="img/menu/3.jpg"
+                     data-title="Wooden Crochet Bag Base"
+                     data-cat="Bag Accessories"
+                     data-price="Rs.800.99" data-old="Rs.850.99"
+                     data-desc="High-quality natural wooden base for creating custom handmade crochet bags, baskets, and structured craft accessories."
+                     data-tags="Natural Wood,Bag Crafting,Top Quality">
+                     <div class="mimg">
+                        <img src="img/menu/3.jpg" alt="Wooden Crochet Bag Base"/>
+                        <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Bag Accessories</div>
+                        <div class="mtit">Wooden Crochet Bag Base</div>
+                        <div class="mdesc">High-quality wooden base for creating custom crochet bags</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">Rs.800.99 <small>Rs.850.99</small></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 4: Tools -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="tools" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="img/menu/4.jpg"
+                     data-title="Crochet Hook Set"
+                     data-cat="Craft Tools"
+                     data-price="Rs.750.00" data-old="Rs.800.00"
+                     data-desc="Colourful ergonomic crochet hooks perfect for creating handmade bags, toys, and crafts"
+                     data-tags="Ergonomic Grip,Durable Metal,Complete Set">
+                     <div class="mimg">
+                        <img src="img/menu/4.jpg" alt="Wrap"/>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Craft Tools</div>
+                        <div class="mtit">Crochet Hook Set</div>
+                        <div class="mdesc">Colourful ergonomic crochet hooks perfect for creating handmade bags, toys, and crafts</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">Rs.750.00</div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 5: Materials -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="materials" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/5.jpg"
+                     data-title="Decorative Feathers"
+                     data-cat="Craft Materials"
+                     data-price="Rs.1200.99" data-old="Rs.1500.99"
+                     data-desc="Colourful decorative feathers perfect for DIY crafts, dream catchers, decorations, and handmade projects"
+                     data-tags="Vibrant Shades,DIY Crafts,Light & Fluffy">
+                     <div class="mimg">
+                        <img src="img/menu/5.jpg" alt="Decorative Feathers"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Craft Materials</div>
+                        <div class="mtit">Decorative Feathers</div>
+                        <div class="mdesc">Colourful decorative feathers perfect for DIY crafts, dream catchers, decorations, and handmade projects</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">Rs.1200.99 <small>Rs.1500.99</small></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+                <!-- end #mgrid -->
+            <div class="text-center mt-5"><a href="catalog.php" class="btn-red"><i class="fas fa-th-large"></i>View Full Collection</a></div>
+         </div>
+      </section>
+               
+               
+	  
+      <!-- ============================================================
+         FIX 4  MENU DETAIL POPUP MODAL
+         ============================================================ -->
+      <div id="menuPop">
+         <div class="mpbox">
+            <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
+            <div class="mpimg"><img id="mpImg" src="" alt=""/></div>
+            <div class="mpbody">
+               <div id="mpCat"></div>
+               <div id="mpTitle"></div>
+               <div id="mpDesc"></div>
+               <div id="mpPrice"></div>
+               <div class="mpqty">
+                  <button class="mpqbtn" id="mpMinus">-</button>
+                  <span class="mpqnum" id="mpQnum">1</span>
+                  <button class="mpqbtn" id="mpPlus">+</button>
+                  <span style="font-size:.82rem;color:#aaa;margin-left:9px;">No. of Items</span>
+               </div>
+               <div class="mptags" id="mpTags"></div>
+               <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+            </div>
+         </div>
+      </div>
+      <!-- SPECIAL OFFER -->
+      <!-- FOOTER -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Glam<span>Handy</span></div>
+                  <p class="fdesc">We bring together quality craft supplies at affordable prices, helping every creator turn ideas into beautiful handmade projects.</p>
+                  <div class="fsoc">
+                     <a href="https://web.facebook.com/info.glamhandycraftstore/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/info.glamhandyofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Quick Links</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="index.html#hero"><i class="fas fa-chevron-right"></i>Home</a></li>
+                     <li><a href="index.html#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Our Collection</a></li>
+                     <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                     <li><a href="index.html#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Our Collection</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Crochet & Yarn</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Beads & Jewellery</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Bag Accessories</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Patterns & Books</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Craft Tools</a></li>
+                     <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Craft Materials</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Get In Touch</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Address</strong>65/39, 7th Lane, Jothiala Rd, Malabe</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Phone</strong>076 344 5742</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>info.glamhandy@gmail.com</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-clock"></i></div>
+                     <div class="fciinfo"><strong>Hours</strong>Mon - Tue: 9 AM - 8 PM | Wed - Sun: 9 AM - 11 PM</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>GlamHandy Craft Store</span>. All Rights Reserved.</p>
+                  <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    
+	<!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="js/aos.js"></script>
+      <!-- Swiper -->
+      <script src="js/swiper-bundle.min.js"></script>
+      <!-- CounterUp -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+   </body>
+</html>

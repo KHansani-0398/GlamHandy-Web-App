@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="author" content="H.Kularatne">
+   <meta name="description" content="Online Arts & Crafts Store">
+   <title>GlamHandy Arts & Crafts</title>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet">
+   <!-- Bootstrap 5.3 -->
+   <link href="css/bootstrap.min.css" rel="stylesheet" />
+   <!-- AOS Animate on Scroll -->
+   <link href="css/aos.css" rel="stylesheet" />
+   <!-- Swiper -->
+   <link href="css/swiper-bundle.min.css" rel="stylesheet" />
+   <!-- all min css -->
+   <link rel="stylesheet" href="css/all.min.css" />
+   <!-- magnific CSS -->
+   <link rel="stylesheet" href="css/magnific-popup.css" />
+   <!-- Style CSS -->
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+   <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+   <div id="topbar">
+      <div class="container">
+         <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div class="top-contact d-flex flex-wrap">
+               <span><i class="fas fa-phone-alt"></i>076 344 5742</span>
+               <span><i class="fas fa-envelope"></i>info.glamhandy@gmail.com</span>
+               <span><i class="fas fa-map-marker-alt"></i>65/39, 7th Lane, Jothiala Rd, Malabe</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+               <span class="ttag"><i class="fas fa-truck me-1"></i>Get your order delivered in just 2 days!</span>
+               <div class="tsoc">
+                  <a href="https://web.facebook.com/info.glamhandycraftstore/?_rdc=1&_rdr" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/info.glamhandyofficial/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+   <nav class="navbar navbar-expand-lg" id="nav">
+      <div class="container">
+         <a class="navbar-brand" href="#">
+            <div class="blogo">
+               <div class="bico"><img src="img/logo.png.jpeg" alt="Logo"></div>
+               <div>
+                  <div class="bname">Glam<span>Handy</span></div>
+                  <div class="bsub">Craft Store</div>
+               </div>
+            </div>
+         </a>
+         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+         </button>
+         <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav mx-auto">
+               <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+               <li class="nav-item"><a class="nav-link" href="catalog.php">Catalog</a></li>
+               <li class="nav-item"><a class="nav-link" href="#chefs">Who we are</a></li>
+               <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+               <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-2">
+               <!-- Search button -->
+               <button id="navSearchBtn" title="Search"><i class="fas fa-search"></i></button>
+               <a href="login.php" class="nav-login me-1"
+                  style="color:var(--dark);font-weight:600;font-size:0.9rem;text-decoration:none;">Login</a>
+               <a href="register.php" class="nav-login me-2"
+                  style="color:var(--primary);font-weight:600;font-size:0.9rem;text-decoration:none;">Register</a>
+               <a href="catalog.php" class="nav-link nav-cta ms-1"><i class="fas fa-shopping-bag me-1"></i>Order Now</a>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <!-- ============================================================
+         FIX 1 � SEARCH OVERLAY POPUP
+         ============================================================ -->
+   <div id="searchOv">
+      <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+      <div class="sovbox">
+         <h4>What do want to create today?</h4>
+         <div class="sovinput">
+            <input type="text" id="searchInput" placeholder="Search yarn, beads, hooks..." autocomplete="off" />
+            <button><i class="fas fa-search"></i></button>
+         </div>
+         <!-- Categories inside search box -->
+         <div class="sovcats">
+            <div class="sovcat active" data-cat="all">
+               <img src="img/menu/1.jpg" alt="" />All Items
+            </div>
+            <div class="sovcat" data-cat="yarn">
+               <img src="img/menu/1.jpg" alt="" />Yarn & Crochet
+            </div>
+            <div class="sovcat" data-cat="jewelry">
+               <img src="img/menu/2.jpg" alt="" />Beads & Jewellery
+            </div>
+            <div class="sovcat" data-cat="bags">
+               <img src="img/menu/3.jpg" alt="" />Bag Accessories
+            </div>
+            <div class="sovcat" data-cat="tools">
+               <img src="img/menu/4.jpg" alt="" />Craft Tools
+            </div>
+            <div class="sovcat" data-cat="materials">
+               <img src="img/menu/5.jpg" alt="" />Craft Materials
+            </div>
+
+         </div>
+         <div class="sovtrend">
+            <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Trending Searches</p>
+            <span class="ttag">Milk Cotton Yarn</span>
+            <span class="ttag">Acryllic Beads</span>
+            <span class="ttag">Crochet Hooks</span>
+            <span class="ttag">Bag Zippers</span>
+            <span class="ttag">Peal Handles</span>
+            <span class="ttag">Knitting Needles</span>
+         </div>
+      </div>
+   </div>
+   <!-- ============================================================
+         HERO
+         ============================================================ -->
+   <section id="hero">
+      <div class="hs hs1"></div>
+      <div class="hs hs2"></div>
+      <div class="hbgtxt">CRAFT</div>
+      <div class="container">
+         <div class="row align-items-center g-5" style="min-height:88vh;">
+            <div class="col-lg-6">
+               <div class="hbadge">
+                  <div class="hbi"><i class="fas fa-star"></i></div>
+                  <span>Your Trusted Craft Store for Affordable & Quality Supplies!</span>
+               </div>
+               <h1 class="htitle">A Creative <span class="hl">Collection </span><br />for Every Crafter</h1>
+               <p class="hdesc">Explore a diverse collection of high-quality craft supplies at affordable prices. From
+                  premium yarns to essential tools and materials, we bring everything you need to create beautiful
+                  handmade pieces.</p>
+               <div class="d-flex flex-wrap gap-3 mb-2">
+                  <a href="catalog.php" class="btn-red"><i class="fas fa-search"></i>Explore Catalog</a>
+                  <!-- FIX 2: Magnific popup video trigger -->
+                  <a href="https://www.youtube.com/watch?v=RXv_uIN6e-Y" class="magnific_popup btn-play popup-youtube">
+                     <div class="pico"><i class="fas fa-play"></i></div>
+                     <span>Watch Our Story</span>
+                  </a>
+               </div>
+               <div class="hstats d-flex gap-3 flex-wrap mt-4">
+                  <div class="hstat"><span class="snum">850<em>+</em></span><small>Happy Customers</small></div>
+                  <div class="sdiv"></div>
+                  <div class="hstat"><span class="snum">450<em>+</em></span><small>Menu Items</small></div>
+                  <div class="sdiv"></div>
+
+                  <div class="hstat"><span class="snum">5<em>yr</em></span><small>Experience</small></div>
+               </div>
+            </div>
+            <div class="col-lg-6">
+               <div style="position:relative;text-align:center;">
+                  <div class="hcircle">
+                     <img src="img/banner-img.png" alt="Burger" />
+                  </div>
+                  <div class="fcard fc1">
+                     <div class="fcoi r"><i class="fas fa-fire"></i></div>
+                     <div><span class="fcnum">Hot Deal</span><span class="fcsm">30% off today</span></div>
+                  </div>
+                  <div class="fcard fc2">
+                     <div class="fcoi y"><i class="fas fa-star"></i></div>
+                     <div><span class="fcnum">4.9/5</span><span class="fcsm">2k+ reviews</span></div>
+                  </div>
+                  <div class="fcard fc3">
+                     <div class="fcoi g"><i class="fas fa-clock"></i></div>
+                     <div><span class="fcnum">2 days</span><span class="fcsm">Fast delivery</span></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- MARQUEE -->
+   <div class="mqsec">
+      <div class="mqtrack">
+         <div class="mqitem"><i class="fas fa-circle"></i>Yarn & Crochet Threads</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Crochet Tools</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Jewellery Making Supplies</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Beads &amp; Pearls</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Keychain Making Supplies</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Bag Accessories & Hardware</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Craft Tools & Equipment</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Zippers & Linings</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Chains & Decorative Hardware</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Fabric & Craft Sheets</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>DIY Craft Accessories</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Crochet Tools</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Beads &amp; Pearls</div>
+         <div class="mqitem"><i class="fas fa-circle"></i>Craft Tools & Equipment</div>
+      </div>
+   </div>
+   <!-- CATEGORY -->
+   <section id="about">
+      <div class="container">
+         <div class="row align-items-center g-5">
+            <div class="col-lg-5" data-aos="fade-right">
+               <div class="astack">
+                  <div class="aexp"><span class="anum">5+</span><small>Years of<br />Excellence</small></div>
+                  <div class="amain"><img src="img/about1.jpg" alt="Restaurant" /></div>
+                  <div class="asm"><img src="img/about2.jpg" alt="" /></div>
+               </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-left">
+               <span class="slbl">Our Story</span>
+               <h2 class="stitle text-start">We Invite You to Visit<br />Our <span>Crafts Shop</span></h2>
+               <div class="sline lft"></div>
+               <p class="sdesc mb-4">Founded in 2021, GlamHandy began as a small craft store with a big dream—to inspire
+                  creativity through quality, affordable supplies. Today, we're proud to help crafters of all skill
+                  levels bring their ideas to life with the same passion that started it all.</p>
+               <div class="mb-4">
+                  <div class="fti">
+                     <div class="ftico r"><i class="fas fa-box-open"></i></div>
+                     <div>
+                        <h6>Wide Product Selection</h6>
+                        <p>Explore a diverse collection of yarns, beads, tools, and craft supplies for every creative
+                           project.</p>
+                     </div>
+                  </div>
+                  <div class="fti">
+                     <div class="ftico y"><i class="fas fa-tags"></i></div>
+                     <div>
+                        <h6>Affordable Prices</h6>
+                        <p>Enjoy great value with budget-friendly prices, making crafting more accessible for everyone
+                        </p>
+                     </div>
+                  </div>
+                  <div class="fti">
+                     <div class="ftico g"><i class="fas fa-medal"></i></div>
+                     <div>
+                        <h6>Quality You Can Trust</h6>
+                        <p>We carefully select reliable, high-quality materials to help you create beautiful handmade
+                           pieces.</p>
+                     </div>
+                  </div>
+               </div>
+               <a href="catalog.php" class="btn-red"><i class="fas fa-th-large"></i>View Full Collection</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ============================================================
+         MENU � FIX 3 (filter works) + FIX 4 (plus opens popup)
+         ============================================================ -->
+   <section id="special">
+      <div class="spbg"></div>
+      <div class="container" style="position:relative;z-index:2;">
+         <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+               <div class="sptag"><i class="fas fa-bolt me-1"></i>Limited Time Offer</div>
+               <h2 class="sptitle">Get 50% Off<br />Craft Supplies<br /><span>Your Next</span>Creative Project</h2>
+               <p class="spdesc">Grab quality yarn, beads, and tools at unbeatable prices. Bring your handmade ideas to
+                  life today!</p>
+               <div class="cdwrap">
+                  <div class="cditem"><span class="cdnum" id="cdH">12</span><span class="cdlbl">Hours</span></div>
+                  <div class="cditem"><span class="cdnum" id="cdM">45</span><span class="cdlbl">Minutes</span></div>
+                  <div class="cditem"><span class="cdnum" id="cdS">30</span><span class="cdlbl">Seconds</span></div>
+               </div>
+               <a href="catalog.php" class="btn-red"><i class="fas fa-shopping-cart"></i>Grab the Deal</a>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+               <div class="spimgw">
+                  <div class="spglow"></div>
+                  <div class="sppbdg"><span class="old">Rs.1700.99</span><span class="np">Rs.850.99</span></div>
+                  <img src="img/off-img.jpg" alt="Special Burger" />
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <!-- ============================================================
+         GALLERY � FIX 7 (click opens detail popup)
+         ============================================================ -->
+   <section id="gallery">
+      <div class="container">
+         <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl">Newest Arrivals</span>
+            <h2 class="stitle">Let's See Our <span>Featured Products</span></h2>
+            <div class="sline"></div>
+         </div>
+         <div class="ggrid" data-aos="fade-up">
+            <div class="gitem" data-gi="0" data-gimg="img/portfolio/work1.jpg" data-gtitle="YarnArt Jeans Premium Yarn"
+               data-gdesc="High-quality yarn for your knitting and crocheting projects.">
+               <img src="img/portfolio/work1.jpg" alt="YarnArt Jeans Premium Yarn" />
+               <div class="gover"><span><i class="fas fa-expand-alt"></i> YarnArt Jeans Premium Yarn</span></div>
+            </div>
+            <div class="gitem" data-gi="1" data-gimg="img/portfolio/work2.jpg"
+               data-gtitle="Miyuki Delica Bead Collection"
+               data-gdesc="High-quality beads for your jewelry-making projects.">
+               <img src="img/portfolio/work2.jpg" alt="Miyuki Delica Beads" />
+               <div class="gover"><span><i class="fas fa-expand-alt"></i>Miyuki Delica Bead Collection</span></div>
+            </div>
+            <div class="gitem" data-gi="2" data-gimg="img/portfolio/work3.jpg"
+               data-gtitle="Tulip Etimo Rose Crochet Hook Set"
+               data-gdesc="Elegant crochet hooks in a beautiful rose color, perfect for your needlework projects.">
+               <img src="img/portfolio/work3.jpg" alt="Crochet Hooks" />
+               <div class="gover"><span><i class="fas fa-expand-alt"></i>Tulip Etimo Rose Crochet Hook Set</span></div>
+            </div>
+            <div class="gitem" data-gi="3" data-gimg="img/portfolio/work4.jpg"
+               data-gtitle="Himalaya Everyday Bebe Lux Yarn"
+               data-gdesc="High-quality yarn for your knitting and crocheting projects.">
+               <img src="img/portfolio/work4.jpg" alt="Yarn" />
+               <div class="gover"><span><i class="fas fa-expand-alt"></i>Himalaya Everyday Bebe Lux Yarn</span></div>
+            </div>
+            <div class="gitem" data-gi="4" data-gimg="img/portfolio/work5.jpg" data-gtitle="Gold Metal Bag Charms"
+               data-gdesc="Elegant metal charms, perfect for adding a touch of sophistication to your accessories.">
+               <img src="img/portfolio/work5.jpg" alt="metal charms" />
+               <div class="gover"><span><i class="fas fa-expand-alt"></i> Gold Metal Bag Charms</span></div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- FIX 7 � GALLERY POPUP -->
+   <div id="galPop">
+      <div class="gpbox">
+         <button class="gpclose" id="gpClose"><i class="fas fa-times"></i></button>
+         <img id="gpImg" src="" alt="" />
+         <div class="gpcap">
+            <h5 id="gpTitle"></h5>
+            <p id="gpDesc"></p>
+         </div>
+         <div class="gpnav">
+            <button id="gpPrev"><i class="fas fa-chevron-left me-1"></i>Prev</button>
+            <button id="gpNext">Next <i class="fas fa-chevron-right ms-1"></i></button>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- ============================================================
+         
+	  
+	  
+      <!-- TEAM -->
+   <section id="chefs">
+      <div class="container">
+         <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl">Committed to Quality</span>
+            <h2 class="stitle">Meet Our Team</h2>
+            <div class="sline"></div>
+         </div>
+         <div class="row g-4">
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+               <div class="chcard">
+                  <div class="chimg">
+                     <img src="img/chefs/1.jpg" alt="" />
+
+                  </div>
+                  <div class="chbody">
+                     <div class="chnm">Prasanna Amajith</div>
+                     <div class="chrole">Store Manager</div>
+                     <div class="chexp">7 years experience</div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+               <div class="chcard">
+                  <div class="chimg">
+                     <img src="img/chefs/2.jpg" alt="" />
+                  </div>
+
+                  <div class="chbody">
+                     <div class="chnm">H.Perera</div>
+                     <div class="chrole">Marketing Manager</div>
+                     <div class="chexp">5 years experience</div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+               <div class="chcard">
+                  <div class="chimg">
+                     <img src="img/chefs/3.jpg" alt="" />
+
+                  </div>
+                  <div class="chbody">
+                     <div class="chnm">C.Amarasinghe</div>
+                     <div class="chrole">Product Sourcing Specialist</div>
+                     <div class="chexp">6 years experience</div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+               <div class="chcard">
+                  <div class="chimg">
+                     <img src="img/chefs/4.jpg" alt="" />
+
+                  </div>
+                  <div class="chbody">
+                     <div class="chnm">N.Dissanayake</div>
+                     <div class="chrole">Customer Support Executive</div>
+                     <div class="chexp">2 years experience</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <!-- HOURS -->
+   <section id="hours">
+      <div class="hrsbg"></div>
+      <div class="container" style="position:relative;z-index:2;">
+         <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl" style="color:#a5d6bc;">Opening Hours</span>
+            <h2 class="stitle" style="color:#fff;">We're Open <span style="color:var(--secondary);">For You</span></h2>
+            <div class="sline"></div>
+         </div>
+         <div class="row g-4 align-items-start">
+            <div class="col-lg-5" data-aos="fade-right">
+               <div class="hrscard">
+                  <div class="hrsrow">
+                     <span class="hrsday"><i class="fas fa-calendar-day me-2" style="color:var(--secondary);"></i>Monday
+                        - Tuesday</span>
+                     <div class="d-flex align-items-center gap-2">
+                        <div class="hdot on"></div>
+                        <span class="hrstime">09:00 AM - 08:00 PM</span>
+                     </div>
+                  </div>
+                  <div class="hrsrow">
+                     <span class="hrsday"><i class="fas fa-calendar-day me-2"
+                           style="color:var(--secondary);"></i>Wednesday - Thursday</span>
+                     <div class="d-flex align-items-center gap-2">
+                        <div class="hdot on"></div>
+                        <span class="hrstime">09:00 AM - 10:00 PM</span>
+                     </div>
+                  </div>
+                  <div class="hrsrow">
+                     <span class="hrsday"><i class="fas fa-calendar-day me-2"
+                           style="color:var(--secondary);"></i>Friday</span>
+                     <div class="d-flex align-items-center gap-2">
+                        <div class="hdot on"></div>
+                        <span class="hrstime">09:00 AM - 11:00 PM</span>
+                     </div>
+                  </div>
+                  <div class="hrsrow">
+                     <span class="hrsday"><i class="fas fa-calendar-day me-2"
+                           style="color:var(--secondary);"></i>Saturday</span>
+                     <div class="d-flex align-items-center gap-2">
+                        <div class="hdot on"></div>
+                        <span class="hrstime">10:00 AM - 11:30 PM</span>
+                     </div>
+                  </div>
+                  <div class="hrsrow">
+                     <span class="hrsday"><i class="fas fa-calendar-day me-2"
+                           style="color:var(--secondary);"></i>Sunday</span>
+                     <div class="d-flex align-items-center gap-2">
+                        <div class="hdot on"></div>
+                        <span class="hrstime">11:00 AM - 09:00 PM</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-3" data-aos="zoom-in">
+               <div class="hrscta">
+                  <i class="fas fa-truck-fast fa-2x mb-3" style="color:rgba(255,255,255,.8);"></i>
+                  <h4>Order Online</h4>
+                  <p>Get your order delivered in just 2 days!</p>
+                  <a href="catalog.php" class="btnw">Order Now</a>
+               </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-left">
+               <div class="hrscard">
+                  <h5
+                     style="color:#fff;margin-bottom:18px;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:700;">
+                     <i class="fas fa-map-marker-alt me-2" style="color:var(--secondary);"></i>Find Us
+                  </h5>
+                  <div class="hrsrow d-flex align-items-start justify-content-between" style="padding:10px 0;"><span
+                        class="hrsday" style="min-width:95px;padding-top:2px;"><i class="fas fa-location-dot me-2"
+                           style="color:var(--secondary);"></i>Address</span><span class="hrstime text-end"
+                        style="font-size:.82rem;line-height:1.4;">65/39, 7th Lane,<br />Jothiala Rd, Malabe</span></div>
+                  <div class="hrsrow d-flex align-items-center justify-content-between" style="padding:10px 0;"><span
+                        class="hrsday" style="min-width:95px;"><i class="fas fa-phone me-2"
+                           style="color:var(--secondary);"></i>Phone</span><span class="hrstime text-end"
+                        style="font-size:.82rem;">0763445742</span></div>
+                  <div class="hrsrow d-flex align-items-center justify-content-between" style="padding:10px 0;"><span
+                        class="hrsday" style="min-width:95px;"><i class="fas fa-envelope me-2"
+                           style="color:var(--secondary);"></i>Email</span><span class="hrstime text-end"
+                        style="font-size:.82rem;">info.glamhandy@gmail.com</span></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <!-- TESTIMONIALS -->
+   <section id="testimonials">
+      <div class="container" data-aos="fade-up">
+         <div class="text-center mb-5">
+            <span class="slbl">What People Say</span>
+            <h2 class="stitle">Our Customers <span>Feedback</span></h2>
+            <div class="sline"></div>
+         </div>
+
+         <div class="swiper tesSwiper">
+            <div class="swiper-wrapper">
+
+               <div class="swiper-slide">
+                  <div class="tescard">
+                     <div class="tesq">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                           <line x1="3" y1="3" x2="21" y2="21"></line>
+                           <circle cx="3" cy="3" r="1.2" fill="currentColor"></circle>
+                           <line x1="21" y1="3" x2="3" y2="21"></line>
+                           <circle cx="21" cy="3" r="1.2" fill="currentColor"></circle>
+                           <circle cx="12" cy="12" r="6.8" fill="var(--primary)" fill-opacity="0.12"></circle>
+                           <path d="M7 10C9.5 8.5 14.5 8.5 17 10"></path>
+                           <path d="M5.5 12.5C8.5 11 15.5 11 18.5 12.5"></path>
+                           <path d="M7 15C9.5 13.5 14.5 13.5 17 15"></path>
+                        </svg>
+                     </div>
+                     <div class="tess">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                     <p class="testxt">
+                        I absolutely love the quality of the yarn and crochet needles from GlamHandy.
+                        Service was very fast and professional!
+                     </p>
+                     <div class="tesauth">
+                        <img src="img/testimonial/1.jpg" alt="H.Kulathunga">
+                        <div>
+                           <div class="tesnm">H.Kulathunga</div>
+                           <div class="tesrl">Regular Customer</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="tescard">
+                     <div class="tesq">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                           <line x1="3" y1="3" x2="21" y2="21"></line>
+                           <circle cx="3" cy="3" r="1.2" fill="currentColor"></circle>
+                           <line x1="21" y1="3" x2="3" y2="21"></line>
+                           <circle cx="21" cy="3" r="1.2" fill="currentColor"></circle>
+                           <circle cx="12" cy="12" r="6.8" fill="var(--primary)" fill-opacity="0.12"></circle>
+                           <path d="M7 10C9.5 8.5 14.5 8.5 17 10"></path>
+                           <path d="M5.5 12.5C8.5 11 15.5 11 18.5 12.5"></path>
+                           <path d="M7 15C9.5 13.5 14.5 13.5 17 15"></path>
+                        </svg>
+                     </div>
+                     <div class="tess">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                     <p class="testxt">
+                        The yarn from GlamHandy is of exceptional quality. I've been using their
+                        products for months and they never disappoint!
+                     </p>
+                     <div class="tesauth">
+                        <img src="img/testimonial/2.jpg" alt="Olivia Johnson">
+                        <div>
+                           <div class="tesnm">Olivia Johnson</div>
+                           <div class="tesrl">Yarn Enthusiast</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="tescard">
+                     <div class="tesq">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                           <line x1="3" y1="3" x2="21" y2="21"></line>
+                           <circle cx="3" cy="3" r="1.2" fill="currentColor"></circle>
+                           <line x1="21" y1="3" x2="3" y2="21"></line>
+                           <circle cx="21" cy="3" r="1.2" fill="currentColor"></circle>
+                           <circle cx="12" cy="12" r="6.8" fill="var(--primary)" fill-opacity="0.12"></circle>
+                           <path d="M7 10C9.5 8.5 14.5 8.5 17 10"></path>
+                           <path d="M5.5 12.5C8.5 11 15.5 11 18.5 12.5"></path>
+                           <path d="M7 15C9.5 13.5 14.5 13.5 17 15"></path>
+                        </svg>
+                     </div>
+                     <div class="tess">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                     <p class="testxt">
+                        I ordered feathers and beads, and they arrived quickly and in perfect
+                        condition. The quality is outstanding!
+                     </p>
+                     <div class="tesauth">
+                        <img src="img/testimonial/3.jpg" alt="Priya Sharma">
+                        <div>
+                           <div class="tesnm">Priya Sharma</div>
+                           <div class="tesrl">Craft Enthusiast</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="tescard">
+                     <div class="tesq">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                           <line x1="3" y1="3" x2="21" y2="21"></line>
+                           <circle cx="3" cy="3" r="1.2" fill="currentColor"></circle>
+                           <line x1="21" y1="3" x2="3" y2="21"></line>
+                           <circle cx="21" cy="3" r="1.2" fill="currentColor"></circle>
+                           <circle cx="12" cy="12" r="6.8" fill="var(--primary)" fill-opacity="0.12"></circle>
+                           <path d="M7 10C9.5 8.5 14.5 8.5 17 10"></path>
+                           <path d="M5.5 12.5C8.5 11 15.5 11 18.5 12.5"></path>
+                           <path d="M7 15C9.5 13.5 14.5 13.5 17 15"></path>
+                        </svg>
+                     </div>
+                     <div class="tess">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                     <p class="testxt">
+                        Stunning beads and threads! My DIY jewelry projects have never looked so vibrant. Highly
+                        recommended store.
+                     </p>
+                     <div class="tesauth">
+                        <img src="img/testimonial/1.jpg" alt="Sarah Jenkins">
+                        <div>
+                           <div class="tesnm">Sarah Jenkins</div>
+                           <div class="tesrl">Jewelry Maker</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="tescard">
+                     <div class="tesq">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                           <line x1="3" y1="3" x2="21" y2="21"></line>
+                           <circle cx="3" cy="3" r="1.2" fill="currentColor"></circle>
+                           <line x1="21" y1="3" x2="3" y2="21"></line>
+                           <circle cx="21" cy="3" r="1.2" fill="currentColor"></circle>
+                           <circle cx="12" cy="12" r="6.8" fill="var(--primary)" fill-opacity="0.12"></circle>
+                           <path d="M7 10C9.5 8.5 14.5 8.5 17 10"></path>
+                           <path d="M5.5 12.5C8.5 11 15.5 11 18.5 12.5"></path>
+                           <path d="M7 15C9.5 13.5 14.5 13.5 17 15"></path>
+                        </svg>
+                     </div>
+                     <div class="tess">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                     <p class="testxt">
+                        The resin craft supplies I ordered were top-notch. I appreciated the eco-friendly packaging and
+                        fast shipping.
+                     </p>
+                     <div class="tesauth">
+                        <img src="img/testimonial/2.jpg" alt="David Smith">
+                        <div>
+                           <div class="tesnm">David Smith</div>
+                           <div class="tesrl">DIY Artist</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="tescard">
+                     <div class="tesq">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                           <line x1="3" y1="3" x2="21" y2="21"></line>
+                           <circle cx="3" cy="3" r="1.2" fill="currentColor"></circle>
+                           <line x1="21" y1="3" x2="3" y2="21"></line>
+                           <circle cx="21" cy="3" r="1.2" fill="currentColor"></circle>
+                           <circle cx="12" cy="12" r="6.8" fill="var(--primary)" fill-opacity="0.12"></circle>
+                           <path d="M7 10C9.5 8.5 14.5 8.5 17 10"></path>
+                           <path d="M5.5 12.5C8.5 11 15.5 11 18.5 12.5"></path>
+                           <path d="M7 15C9.5 13.5 14.5 13.5 17 15"></path>
+                        </svg>
+                     </div>
+                     <div class="tess">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                     </div>
+                     <p class="testxt">
+                        The silk embroidery threads and wooden hoops are standard-setting. Every detail of my embroidery
+                        pops out beautifully.
+                     </p>
+                     <div class="tesauth">
+                        <img src="img/testimonial/4.jpg" alt="Sophia Martinez">
+                        <div>
+                           <div class="tesnm">Sophia Martinez</div>
+                           <div class="tesrl">Embroidery Designer</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div> <!-- End .swiper-wrapper -->
+
+            <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+               <div class="tes-prev tes-nav-btn"><i class="fas fa-chevron-left"></i></div>
+               <div class="swiper-pagination position-static w-auto"></div>
+               <div class="tes-next tes-nav-btn"><i class="fas fa-chevron-right"></i></div>
+            </div>
+
+         </div> <!-- End .swiper -->
+
+      </div>
+   </section>
+
+
+   <!-- BLOG -->
+   <section id="blog">
+      <div class="container">
+         <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl">News &amp; Updates</span>
+            <h2 class="stitle">Our Latest <span>Blog</span> Posts</h2>
+            <div class="sline"></div>
+         </div>
+         <div class="row g-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+               <div class="blcard">
+                  <div class="blimg">
+                     <img src="img/blog/1.jpg" alt="" />
+                     <div class="bldatebdg"><span class="bd">14</span><span class="bm">Mar</span></div>
+                  </div>
+                  <div class="blbody">
+                     <div class="bltag">Craft Tips</div>
+                     <div class="bltit"><a href="#">5 Beginner Crochet Tips Everyone Should Know</a></div>
+                     <div class="blmeta"><span><i class="fas fa-user"></i>GlamHandy Team</span><span><i
+                              class="fas fa-comment"></i>24 Comments</span></div>
+                     <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+               <div class="blcard">
+                  <div class="blimg">
+                     <img src="img/blog/2.jpg" alt="" />
+                     <div class="bldatebdg"><span class="bd">28</span><span class="bm">Feb</span></div>
+                  </div>
+                  <div class="blbody">
+                     <div class="bltag">DIY ideas</div>
+                     <div class="bltit"><a href="#">Creative Ways to Use Beads in Handmade Jewelry</a></div>
+                     <div class="blmeta"><span><i class="fas fa-user"></i>Amaya Ranathunga</span><span><i
+                              class="fas fa-comment"></i>18 Comments</span></div>
+                     <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+               <div class="blcard">
+                  <div class="blimg">
+                     <img src="img/blog/3.jpg" alt="" />
+                     <div class="bldatebdg"><span class="bd">05</span><span class="bm">Jan</span></div>
+                  </div>
+                  <div class="blbody">
+                     <div class="bltag">Yarn Guide</div>
+                     <div class="bltit"><a href="#">Choosing the Perfect Yarn for Your Next Projects</a></div>
+                     <div class="blmeta"><span><i class="fas fa-user"></i>Adithi Perera</span><span><i
+                              class="fas fa-comment"></i>32 Comments</span></div>
+                     <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- NEWSLETTER -->
+   <section id="newsletter">
+      <div class="nlbg"></div>
+      <div class="container">
+         <div class="nlw text-center" data-aos="zoom-in">
+            <span class="slbl" style="color:rgba(255,255,255,.7);">Stay Connected</span>
+            <h2 class="mb-3" style="color:#fff;">Subscribe &amp; Get Exclusive <span
+                  style="color:var(--secondary);">Deals</span></h2>
+            <p class="mb-4" style="color:rgba(255,255,255,.78);">Get 15% off your first order plus early access to new
+               collections</p>
+            <div class="nl-form-wrap">
+               <input class="nlinput" type="email" id="nlEmail" placeholder="Enter your email address..." />
+               <button class="nlbtn" id="nlBtn"><i class="fas fa-paper-plane me-1"></i>Subscribe</button>
+            </div>
+            <p style="color:rgba(255,255,255,.45);font-size:.76rem;margin-top:11px;"><i class="fas fa-lock me-1"></i>No
+               spam, unsubscribe anytime.</p>
+         </div>
+      </div>
+   </section>
+
+   <!-- ============================================================
+         FIX 6 � CONTACT FORM
+         ============================================================ -->
+   <section id="contact-section">
+      <div class="container">
+         <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl">Get In Touch</span>
+            <h2 class="stitle">Contact <span>Us</span></h2>
+            <div class="sline"></div>
+            <p class="sdesc mx-auto" style="max-width:480px;">Have a question, feedback, or want to share your crafts?
+               We'd love to hear from you.</p>
+         </div>
+         <div class="row g-4">
+            <div class="col-lg-4" data-aos="fade-right">
+               <div class="ctdark">
+                  <h4>Let's Talk</h4>
+                  <p class="ctsub">We typically respond within 1 hour during business hours.</p>
+                  <div class="ctitem d-flex align-items-start gap-3 mb-4">
+                     <div class="cticon"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="ctinfo">
+                        <strong class="d-block text-white-50 text-uppercase mb-1"
+                           style="font-size: 0.75rem; letter-spacing: 1px;">Address</strong>
+                        <span class="text-white fw-medium"
+                           style="font-size: 0.92rem; line-height: 1.4; display: block;">65/39, 7th Lane, Jothiala Rd,
+                           Malabe</span>
+                     </div>
+                  </div>
+                  <div class="ctitem d-flex align-items-start gap-3 mb-4">
+                     <div class="cticon"><i class="fas fa-phone-alt"></i></div>
+                     <div class="ctinfo">
+                        <strong class="d-block text-white-50 text-uppercase mb-1"
+                           style="font-size: 0.75rem; letter-spacing: 1px;">Phone</strong>
+                        <span class="text-white fw-medium" style="font-size: 0.92rem; display: block;">076 344
+                           5742</span>
+                     </div>
+                  </div>
+                  <div class="ctitem d-flex align-items-start gap-3 mb-4">
+                     <div class="cticon"><i class="fas fa-envelope"></i></div>
+                     <div class="ctinfo">
+                        <strong class="d-block text-white-50 text-uppercase mb-1"
+                           style="font-size: 0.75rem; letter-spacing: 1px;">Email</strong>
+                        <span class="text-white fw-medium"
+                           style="font-size: 0.92rem; display: block;">info.glamhandy@gmail.com</span>
+                     </div>
+                  </div>
+                  <div class="ctitem d-flex align-items-start gap-3 mb-4">
+                     <div class="cticon"><i class="fas fa-clock"></i></div>
+                     <div class="ctinfo">
+                        <strong class="d-block text-white-50 text-uppercase mb-1"
+                           style="font-size: 0.75rem; letter-spacing: 1px;">Working Hours</strong>
+                        <span class="text-white fw-medium"
+                           style="font-size: 0.9rem; line-height: 1.4; display: block;">Mon - Tue: 9 AM - 8 PM<br />Wed
+                           - Sun: 9 AM - 11 PM</span>
+                     </div>
+                  </div>
+                  <div class="ctsocrow">
+                     <a href="https://web.facebook.com/info.glamhandycraftstore/?_rdc=1&_rdr" target="_blank"><i
+                           class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/info.glamhandyofficial/" target="_blank"><i
+                           class="fab fa-instagram"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-left">
+               <div class="fcard">
+                  <!-- Start of Contact Form -->
+                  <form id="Contactform" action="contact.php" method="POST">
+                     <div class="row g-3">
+
+                        <!-- To input name -->
+                        <div class="col-sm-6"><label class="flbl">Your Name *</label><input type="text" name="name"
+                              class="fctrl" placeholder="Jenul Mendis" /></div>
+
+                        <!-- To input email -->
+                        <div class="col-sm-6"><label class="flbl">Email Address *</label><input type="email"
+                              name="email" class="fctrl" placeholder="you@email.com" /></div>
+
+                        <!-- To input mobile -->
+                        <div class="col-sm-6"><label class="flbl">Phone Number</label><input type="tel" name="mobile"
+                              class="fctrl" placeholder="+xx xx xxx xxxx" /></div>
+
+                        <!-- To input Subject Options -->
+                        <div class="col-sm-6">
+                           <label class="flbl">Subject *</label>
+                           <select class="fctrl" name="select">
+                              <option>General Inquiry</option>
+                              <option>Special Requests for Orders</option>
+                              <option>Sharing Handmade Crafts</option>
+                              <option>Feedback</option>
+                           </select>
+                        </div>
+
+                        <!-- To input message -->
+                        <div class="col-12"><label class="flbl">Message *</label><textarea class="fctrl" name="msg"
+                              rows="5" placeholder="Write your message here..."></textarea></div>
+
+                        <!-- Send Message button -->
+                        <div class="col-12"><button type="submit" class="btn-red" name="Sendmsg" id="ctcBtn"><i
+                                 class="fas fa-paper-plane"></i>Send Message</button></div>
+                     </div>
+                     <div class="sucmsg" id="ctcOk">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Message sent! We'll reply within 1 hour</p>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- FOOTER -->
+   <footer>
+      <div class="container">
+         <div class="row g-5">
+            <div class="col-lg-4">
+               <div class="fnm">Glam<span>Handy</span></div>
+               <p class="fdesc">We bring together quality craft supplies at affordable prices, helping every creator
+                  turn ideas into beautiful handmade projects.</p>
+               <div class="fsoc">
+                  <a href="https://web.facebook.com/info.glamhandycraftstore/?_rdc=1&_rdr" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/info.glamhandyofficial/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+               <div class="ftit">Quick Links</div>
+               <ul class="flinks ps-0">
+                  <li><a href="#hero"><i class="fas fa-chevron-right"></i>Home</a></li>
+                  <li><a href="#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+                  <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Our Collection</a></li>
+                  <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                  <li><a href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
+               </ul>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+               <div class="ftit">Our Collection</div>
+               <ul class="flinks ps-0">
+                  <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Crochet & Yarn</a></li>
+                  <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Beads & Jewellery</a></li>
+                  <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Bag Accessories</a></li>
+                  <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Patterns & Books</a></li>
+                  <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Craft Tools</a></li>
+                  <li><a href="catalog.php"><i class="fas fa-chevron-right"></i>Craft Materials</a></li>
+               </ul>
+            </div>
+            <div class="col-lg-4">
+               <div class="ftit">Get In Touch</div>
+               <div class="fci">
+                  <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="fciinfo"><strong>Address</strong>65/39, 7th Lane, Jothiala Rd, Malabe</div>
+               </div>
+               <div class="fci">
+                  <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                  <div class="fciinfo"><strong>Phone</strong>076 344 5742</div>
+               </div>
+               <div class="fci">
+                  <div class="fciico"><i class="fas fa-envelope"></i></div>
+                  <div class="fciinfo"><strong>Email</strong>info.glamhandy@gmail.com</div>
+               </div>
+               <div class="fci">
+                  <div class="fciico"><i class="fas fa-clock"></i></div>
+                  <div class="fciinfo"><strong>Hours</strong>Mon - Tue: 9 AM - 8 PM | Wed - Sun: 9 AM - 11 PM</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="fbot">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <p>&copy; 2026 <span>GlamHandy Craft Store</span>. All Rights Reserved.</p>
+               <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- Back to top -->
+   <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+   <!-- jQuery -->
+   <script src="js/jquery-3.7.1.min.js"></script>
+   <!-- Bootstrap 5 -->
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <!-- AOS -->
+   <script src="js/aos.js"></script>
+   <!-- Swiper -->
+   <script src="js/swiper-bundle.min.js"></script>
+   <!-- CounterUp -->
+   <script src="js/jquery.magnific-popup.min.js"></script>
+   <!-- Main js -->
+   <script src="js/main.js"></script>
+</body>
+
+</html>
